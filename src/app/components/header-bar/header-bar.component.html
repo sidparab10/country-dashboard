@@ -1,0 +1,10 @@
+<div class="header-container">
+    <div class="mode-btn-container">
+        <button class="mode-btn" (click)="toggleMode()">
+            <span class="icon">
+                <i class="fa" [ngClass]="{'fa-moon-o': isDark, 'fa-sun-o': !isDark}"></i>
+            </span>
+            <span class="label">{{getMode()}}</span>
+        </button>
+    </div>
+</div>

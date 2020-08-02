@@ -1,0 +1,50 @@
+.input-toolbar-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  margin: 10px 0;
+
+  .search-country-container {
+    display: flex;
+
+    .icon {
+      padding: 10px;
+      background-color: #2b3945;
+    }
+
+    .search-input {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #2b3945;
+      color: #fff;
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .country-region-combo {
+    .region-dropdown {
+      padding: 10px 20px;
+      background-color: #2b3945;
+      color: #fff;
+    }
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .input-toolbar-container {
+    display: block;
+
+    .search-country-container {
+      .search-input {
+        width: 100%;
+      }
+
+      margin-bottom: 20px;
+    }
+  }
+}

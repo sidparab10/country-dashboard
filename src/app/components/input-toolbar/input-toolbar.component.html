@@ -1,0 +1,16 @@
+<div class="input-toolbar-container">
+  <div class="search-country-container">
+    <span class="icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <input type="search" class="search-input" [(ngModel)]="searchVal" (keydown)="getSearchedCountry()"
+      name="country-search" placeholder="Search for country">
+  </div>
+  <div class="country-region-combo">
+    <select class="region-dropdown" name="country-region" [(ngModel)]="selectedOption" (change)="getCountryByRegion()">
+      <option value="" disabled>Filter By Region</option>
+      <option value="all" selected>All</option>
+      <option *ngFor="let region of allRegions" value="{{region}}">{{region}}</option>
+    </select>
+  </div>
+</div>

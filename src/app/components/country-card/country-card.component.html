@@ -1,0 +1,15 @@
+<div class="country-card" (click)="openCountryDetails()">
+  <div class="flag-img">
+    <div class="flag" [style.background-image]="'url('+country.flag+')'"></div>
+  </div>
+  <div class="details">
+    <div class="country-name">
+      <span>{{country.name}}</span>
+    </div>
+    <div class="country-detail">
+      <div>Population: {{country.population}}</div>
+      <div>Region: {{country.region}}</div>
+      <div>Capital: {{country.capital}}</div>
+    </div>
+  </div>
+</div>

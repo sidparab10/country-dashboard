@@ -1,0 +1,40 @@
+@import "./../../../styles.scss";
+
+.header-container {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-end;
+    background: $dark-foreground;
+
+    .mode-btn {
+        background: transparent;
+        border: none;
+        color: $dark-text;
+        cursor: pointer;
+        font-size: 16px;
+
+        &:focus {
+            outline: none;
+        }
+
+        .icon {
+            margin-right: 5px;
+        }
+    }
+}
+
+.dark {
+    background: $dark-foreground;
+
+    .mode-btn {
+        color: $dark-text;
+    }
+}
+
+.light {
+    background: $light-foreground;
+
+    .mode-btn {
+        color: $light-text;
+    }
+}

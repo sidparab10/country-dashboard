@@ -1,0 +1,6 @@
+<div class="country-listing-container">
+    <app-input-toolbar></app-input-toolbar>
+    <div *ngIf="countryListing.length" class="country-card-lists">
+        <app-country-card *ngFor="let country of countryListing" [country]="country"></app-country-card>
+    </div>
+</div>

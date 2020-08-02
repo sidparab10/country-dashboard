@@ -1,0 +1,35 @@
+<div class="country-details-container">
+    <div class="navigation-container">
+        <button class="back-btn" (click)="redirectToPrevPage()">Back</button>
+    </div>
+    <div class="country-details-wrapper">
+        <div class="flag-img">
+            <div class="flag" [style.background-image]="'url('+countryDetails.flag+')'"></div>
+        </div>
+        <div class="detail-container">
+            <div class="name-label">
+                <h3>{{countryDetails.name}}</h3>
+            </div>
+            <div class="details">
+                <div class="column column-1">
+                    <div>Native Name: <span class="value">{{countryDetails.nativeName}}</span></div>
+                    <div>Population: <span class="value">{{countryDetails.population}}</span></div>
+                    <div>Region: <span class="value">{{countryDetails.region}}</span></div>
+                    <div>Sub Region: <span class="value">{{countryDetails.subregion}}</span></div>
+                    <div>Capital: <span class="value">{{countryDetails.capital}}</span></div>
+                </div>
+                <div class="column column-2">
+                    <div>Top Level Domains: <span class="value">{{countryDetails.topLevelDomain}}</span></div>
+                    <div>Currencies: <span class="value">{{getCurrenciesLang(countryDetails.currencies)}}</span></div>
+                    <div>Languages: <span class="value">{{getCurrenciesLang(countryDetails.languages)}}</span></div>
+                </div>
+            </div>
+            <div class="border-countries-container" *ngIf="borderCountries && borderCountries.length">
+                <h4 class="border-country-label">Border Countries:</h4>
+                <div class="border-country-btn" >
+                    <button class="border-country" *ngFor="let country of borderCountries" (click)="redirectToCountry(country)">{{country}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
